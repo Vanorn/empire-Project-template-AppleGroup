@@ -4,14 +4,23 @@
 # =====================================================
 from data import family_members
 
-def search_member(target_name):
+def search_member(target_name):    
 #   - หาคนใน family_members ที่ชื่อตรงกับ target_name (ไม่สนตัวพิมพ์ใหญ่/เล็ก)
 #   - เจอ -> return dict ของคนนั้น | ไม่เจอ -> return None
     # TODO: เขียนโค้ดตรงนี้
-    pass
+        i = 0
+        count = len(family_members)
+        while True:
+            # print (i)
+            if (i >= count):
+                return "ไม่พบข้อมูล"
+            elif (target_name.lower() == family_members[i]["name"].lower()):
+                return family_members[i]
+            else:
+                i += 1
 
 
 # ทดสอบเฉพาะไฟล์ตัวเอง: พิมพ์  python -m personnel.search_member
 if __name__ == "__main__":
     print(search_member("tony"))        # ต้องได้ dict ของ Tony (พิมพ์เล็กก็ต้องเจอ)
-    print(search_member("ไม่มีคนนี้"))    # ต้องได้ None
+    # print(search_member("ไม่มีคนนี้"))    # ต้องได้ None
