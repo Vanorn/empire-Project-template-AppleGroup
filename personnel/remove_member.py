@@ -4,11 +4,15 @@
 # =====================================================
 from data import family_members
 
-def remove_member(target_name):
+def remove_member(name):
 #   - หาคนที่ชื่อตรงกับ target_name (ไม่สนตัวพิมพ์ใหญ่/เล็ก) แล้วลบออกจาก family_members
 #   - ลบสำเร็จ -> return True | ไม่เจอ -> return False
-    # TODO: เขียนโค้ดตรงนี้
-    pass
+    # TODO:
+        for member in family_members:
+            if member["name"].lower() == name.lower() :
+                family_members.remove(member)
+                return True
+        return False
 
 
 # ทดสอบเฉพาะไฟล์ตัวเอง: พิมพ์  python -m personnel.remove_member
