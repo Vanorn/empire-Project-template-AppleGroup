@@ -25,7 +25,7 @@ def main():
         # print("6. ส่งไปทำภารกิจ")
         print("6. ออกจากระบบ")
 
-        choice = input("เลือกคำสั่ง (1-7): ")
+        choice = input("เลือกคำสั่ง (1-6): ")
 
         # ---------- เมนู 1 (ตัวอย่าง เขียนให้ดูแล้ว) ----------
         if choice == '1':
@@ -52,7 +52,7 @@ def main():
             print("\n--- ค้นหาประวัติ ---")
             # TODO:
             target_name = input("ชื่อที่ต้องการค้นหา : ")
-            search_member(target_name)
+            print(search_member(target_name))
             # print("!! เมนูนี้ยังไม่ถูกเชื่อม")
 
         # ---------- เมนู 4 (TODO) ----------
