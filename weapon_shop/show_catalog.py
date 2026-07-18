@@ -1,12 +1,15 @@
 # =====================================================
-#  weapon_shop/show_catalog.py — คนรับผิดชอบ: ______________________
+#  weapon_shop/show_catalog.py — คนรับผิดชอบ: Dill
 #  หน้าที่: แสดงรายการอาวุธทั้งหมดที่มีขาย
 # =====================================================
 from data import weapons_catalog
 
+
 def show_catalog():
 #   - print อาวุธทุกชิ้นใน weapons_catalog บรรทัดละชิ้น (รหัส, ชื่อ, ราคา, พลังโบนัส)
-    # TODO: เขียนโค้ดตรงนี้
+    for c in weapons_catalog:
+        print((c),weapons_catalog[c])
+        
     pass
 
 
